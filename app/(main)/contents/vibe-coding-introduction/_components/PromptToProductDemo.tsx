@@ -254,7 +254,7 @@ export default function PromptToProductDemo() {
                 <div className="space-y-4">
                   <p className="font-medium">正在设计您的产品界面...</p>
                   <div className="space-y-2">
-                    {buildSteps.slice(0, currentStep + 1).map((step, idx) => (
+                    {buildSteps.slice(0, currentStep + 1).map((step) => (
                       <div key={step.step} className="flex items-center">
                         <motion.div
                           initial={{ opacity: 0, scale: 0.8 }}

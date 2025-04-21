@@ -9,7 +9,7 @@ export default function VibeCodingIntroduction() {
             <h2 className="text-5xl md:text-7xl font-bold text-center mb-16">
                 编程有了
                 <span className="relative inline-block ml-4">
-                    <span className="relative z-10 text-primary">"氛围感"</span>
+                    <span className="relative z-10 text-primary">&quot;氛围感&quot;</span>
                     <div className="absolute -bottom-2 left-0 w-full h-3 bg-primary/20 rounded-full"></div>
                 </span>
             </h2>

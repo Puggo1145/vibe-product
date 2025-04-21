@@ -55,11 +55,10 @@ export default function WebInterface() {
               <div className="w-2 h-2 rounded-full bg-green-400"></div>
             </div>
             <div className="p-4 text-[10px]">
-              <div className="text-xs font-mono text-slate-800 mb-1">// Learn to code with Vibe</div>
               <div className="font-mono text-left">
                 <span className="text-purple-600">function</span> <span className="text-yellow-600">learnToCode</span>() {'{'}
                 <div className="pl-4">
-                  <span className="text-purple-600">const</span> skills = [<span className="text-green-600">'HTML'</span>, <span className="text-green-600">'CSS'</span>, <span className="text-green-600">'JavaScript'</span>];
+                  <span className="text-purple-600">const</span> skills = [<span className="text-green-600">&apos;HTML&apos;</span>, <span className="text-green-600">&apos;CSS&apos;</span>, <span className="text-green-600">&apos;JavaScript&apos;</span>];
                 </div>
                 <div className="pl-4">
                   <span className="text-purple-600">let</span> experience = <span className="text-blue-600">0</span>;
@@ -79,7 +78,7 @@ export default function WebInterface() {
                 <div className="pl-8">{'})'}</div>
                 <div className="pl-4">{'}'}</div>
                 <div className="pl-4">
-                  <span className="text-purple-600">return</span> <span className="text-green-600">'Vibe Coding Master'</span>;
+                  <span className="text-purple-600">return</span> <span className="text-green-600">&apos;Vibe Coding Master&apos;</span>;
                 </div>
                 {'}'}
               </div>

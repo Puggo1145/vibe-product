@@ -1,6 +1,3 @@
-import React from 'react';
-import Image from 'next/image';
-
 // Create custom SVG components for all product logos
 export const CursorIcon = ({ size = 56 }: { size?: number }) => (
     <div className="flex items-center justify-center w-full h-full text-primary">

@@ -86,7 +86,7 @@ export default function AppInterface() {
           </div>
           <div className="max-w-[70%]">
             <div className="bg-white rounded-2xl rounded-bl-none px-3 py-2 text-[10px] text-left">
-              I'm having some issues with the responsive design. Could you help me later?
+              I&apos;m having some issues with the responsive design. Could you help me later?
             </div>
             <div className="text-left text-[8px] text-slate-500 ml-1 mt-0.5">9:34 AM</div>
           </div>
@@ -96,9 +96,9 @@ export default function AppInterface() {
         <div className="flex flex-row-reverse items-end space-x-reverse space-x-1">
           <div className="max-w-[70%]">
             <div className="bg-blue-500 text-white rounded-2xl rounded-br-none px-3 py-2 text-[10px] text-left">
-              Sure David, I can help you with that. Let's set up a quick call at 2pm?
+              Sure David, I can help you with that. Let&apos;s set up a quick call at 2pm?
             </div>
-            <div className="text-left text-[8px] text-slate-500 mr-1 mt-0.5 text-right">9:36 AM</div>
+            <div className="text-left text-[8px] text-slate-500 mr-1 mt-0.5">9:36 AM</div>
           </div>
         </div>
 
@@ -120,7 +120,7 @@ export default function AppInterface() {
           </div>
           <div className="max-w-[70%]">
             <div className="bg-white rounded-2xl rounded-bl-none px-3 py-2 text-[10px] text-left">
-              I'll join the call too. Also, I've added some new mockups to our Figma project 🎨
+              I&apos;ll join the call too. Also, I&apos;ve added some new mockups to our Figma project 🎨
             </div>
             <div className="text-left text-[8px] text-slate-500 ml-1 mt-0.5">9:38 AM</div>
           </div>
@@ -129,9 +129,9 @@ export default function AppInterface() {
         <div className="flex flex-row-reverse items-end space-x-reverse space-x-1">
           <div className="max-w-[70%]">
             <div className="bg-blue-500 text-white rounded-2xl rounded-br-none px-3 py-2 text-[10px] text-left">
-              Awesome! Looking forward to seeing them. I think we're making great progress with the project 🚀
+              Awesome! Looking forward to seeing them. I think we&apos;re making great progress with the project 🚀
             </div>
-            <div className="text-left text-[8px] text-slate-500 mr-1 mt-0.5 text-right">9:40 AM</div>
+            <div className="text-left text-[8px] text-slate-500 mr-1 mt-0.5">9:40 AM</div>
           </div>
         </div>
 
