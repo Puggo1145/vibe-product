@@ -1,0 +1,10 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Your rule content
+
+content.md 是一个网站内容的描述性文件，你需要根据文件的内容构建网站各个 section 的内容 \
+注意，如果我在对话中为一个 section 提出了新的更改，但 那么你需要将修改同步到 content.md 中

@@ -1,0 +1,13 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 外圆角矩形 -->
+  <rect x="10" y="10" width="100" height="100" rx="20" stroke="white" stroke-width="6" fill="none"/>
+
+  <!-- 圆点 (左) -->
+  <circle cx="38" cy="60" r="7" fill="white"/>
+
+  <!-- 斜杠 / (中) -->
+  <line x1="52" y1="75" x2="66" y2="45" stroke="white" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- 大于号 > (右) -->
+  <polyline points="78,50 90,60 78,70" stroke="white" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
