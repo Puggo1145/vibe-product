@@ -23,14 +23,14 @@ export default function AICodingToolsSection() {
       scenario: "我想构建出完整的产品",
       category: "AI IDE",
       description: "AI IDE 在传统编程专用的 IDE 基础上，添加了如 AI 代码补全和 Agent 模式等 AI 功能，功能更丰富、更复杂、更完整，可以与代码编写流程无缝融合，实现 AI 和人工之间的平衡协作",
-      products: ["Cursor", "Windsurf"],
+      products: ["cursor", "Windsurf"],
       icon: <CodeIcon className="w-10 h-10" />
     },
     {
       scenario: "我想快速构建出产品原型界面",
       category: "AI 界面生成工具",
       description: "更为简单的原型设计工具，描述你的产品功能或界面，即可快速生成产品原型界面",
-      products: ["V0.dev"],
+      products: ["v0", "lovable"],
       icon: <LayoutDashboardIcon className="w-10 h-10" />
     },
     {

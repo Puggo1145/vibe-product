@@ -2,9 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
-import Logo from "@/public/logo.svg"
-import Github from "@/public/github.svg"
-
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full px-8 py-2 border-b border-muted bg-background/95 
@@ -13,7 +10,7 @@ export default function Header() {
         {/* Left side: Logo + Name */}
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Image src={Logo} alt="Logo" className="h-6 w-6 text-foreground" /> {/* Placeholder Logo */}
+            <Image src="/logo.svg" alt="Logo" width={24} height={24} className="h-6 w-6 text-foreground" />
             <span className="font-bold text-foreground">
               Vibe Product
             </span>
@@ -30,8 +27,10 @@ export default function Header() {
           >
             <Link href="https://github.com/vibe-product" className="flex items-center space-x-2">
               <Image
-                src={Github}
+                src="/icons/github.svg"
                 alt="Github"
+                width={24}
+                height={24}
                 className="size-6 text-foreground"
               />
             </Link>

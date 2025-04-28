@@ -1,8 +1,8 @@
 "use client"
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ProductLogos } from './ProductLogos';
+import Image from 'next/image';
 
 interface ToolCardProps {
   category: string;
@@ -10,9 +10,6 @@ interface ToolCardProps {
   products: string[];
   icon: React.ReactNode;
 }
-
-// Type for supported product keys
-type ProductKey = keyof typeof ProductLogos;
 
 export default function ToolCard({ category, description, products, icon }: ToolCardProps) {
   const [activeProduct, setActiveProduct] = useState<string | null>(null);
@@ -47,18 +44,12 @@ export default function ToolCard({ category, description, products, icon }: Tool
         {/* Products */}
         <div className="space-y-6 mt-auto">
           <h4 className="font-medium text-primary">推荐产品</h4>
-          
+
           {/* Product logos - horizontal layout */}
           <div className="flex gap-8 items-center flex-wrap">
             {products.map((product, index) => {
-              // Type check to ensure product exists in ProductLogos
-              const isValidProduct = product in ProductLogos;
-              const LogoComponent = isValidProduct 
-                ? ProductLogos[product as ProductKey] 
-                : null;
-              
               return (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="flex flex-col items-center gap-3 cursor-pointer"
                   onMouseEnter={() => setActiveProduct(product)}
@@ -68,7 +59,13 @@ export default function ToolCard({ category, description, products, icon }: Tool
                 >
                   <div className={`relative p-4 rounded-xl ${activeProduct === product ? 'bg-primary/10' : 'bg-background hover:bg-primary/5'} transition-colors duration-300 border border-border/40`}>
                     <div className="text-primary hover:text-primary/80 transition-colors">
-                      {LogoComponent && <LogoComponent size={56} />}
+                      <Image
+                        src={`/icons/${product.toLowerCase()}-logo.svg`}
+                        alt={product}
+                        width={56}
+                        height={56}
+                        className="text-white"
+                      />
                     </div>
                   </div>
                   <span className="text-sm font-medium">{product}</span>
