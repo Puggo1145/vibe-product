@@ -101,3 +101,63 @@ AI 生成过程有分步进度动画。
 - Deepseek:
     - Deepseek V3 （通用模型）
     - Deepseek R1 （推理模型）
+
+# 5. Prompt Design
+1. 标题：沟通是一门艺术
+
+2. 文本：
+提示词（prompt）是你与模型之间重要的“接口”。掌握一些通用原则，再结合各类模型的差异，把「我想让边距再窄一点」这种朦胧的想法变成精确、可复现的指令。
+
+---
+
+### 5.1 通用五步法
+
+| 步骤 | 关键做法 | Why it matters |
+|------|-----------|----------------|
+| **1. 角色设定** | 用一句话告诉模型它是谁、它要做什么。例：`You are an expert UI designer…` | Claude 和 GPT 都会优先遵循 system 角色 |
+| **2. 明确目标** | 指出最终产物格式（文本 / JSON / 代码片段）。例：`Return Figma-like JSON representing the UI.` | 减少模型“发挥” |
+| **3. 上下文输入** | 给足背景：产品定位、用户画像、已知约束。 | 长上下文对 Claude / GPT 效果显著 |
+| **4. 分步思考** | 要求模型「逐步思考，再给结论」。例：`Think step-by-step, then output final answer only.` | 推理模型尤为受益 |
+| **5. 迭代 & 反馈** | 如果结果不理想：指出问题 → 添加示例 → 缩小范围。 | Prompt 设计是循环而非一次成型 |
+
+---
+
+### 5.2 针对不同模型类型的沟通策略
+
+| 模型类型 | 推荐策略 | 注意事项 |
+|---------|---------|---------|
+| **通用模型**<br/>(GPT-4o, Claude Sonnet, DeepSeek V3) | - 在对话开头统一设定角色。- 在一个 prompt 里同时给目标 + 约束 + 示例。 | 追求响应速度时，可删减示例数量。 |
+| **推理模型**<br/>(Claude Sonnet Thinking, GPT o3, DeepSeek R1, Gemini 2.5 Pro) | - 不要设计提示词，为推理模型预留发挥空间，限制太多反而影响其输出质量 | 这类模型慢，但擅长长链逻辑；给足推理空间。 |
+| **多模态模型**<br/>(GPT-4o, Gemini) | - 上传 UI 参考图和界面草稿等，并要求模型“参考图片设计和布局” | 避免在同一轮里上传多张图片；分批更稳。 |
+
+---
+
+### 5.3 快速模板（复制即可用）
+
+```text
+SYSTEM: You are a senior product engineer.
+USER: Our goal ► Build a minimal “habit tracker” mobile UI.
+Constraints ► Dark theme, ‎iOS-style padding, Chinese copy.
+Deliverable ► Figma-like JSON.
+Process ► Think step-by-step.
+```
+
+# 6. example
+1. 标题：一个产品原型，就这么简单！
+
+横向展示一些产品原型，每个原型下方有对应的 prompt 和模型类型。都使用 DeviceFrame type="mobile" 组件完成。
+
+2. 样例提示词：
+我想要开发一个 [xxx] app，将其输出为一个高保真的原型图设计，请根据以下规范完成：
+1. 产品设计：分析产品的主要功能和需求，确定核心功能
+2. UI 设计：保证设计符合目标人群的喜好和使用习惯、符合移动端的设计规范，使用现代的 UI 元素，注重产品体验和视觉
+3. mock 内容：适当使用图片、icon 等元素填充产品原型的内容，增加真实感
+4. 输出：
+- 根据功能拆分代码文件，注重模块化，每个页面有一个独立的文件
+- 使用一个统一的 frame 包裹所有页面，并支持通过导航栏跳转
+
+3. 示例 App：
+- youtube 风视频流媒体 app
+- 短视频 app
+- 冥想专注 app
+- 番茄时钟 app
