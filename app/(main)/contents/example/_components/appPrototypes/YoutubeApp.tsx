@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Search, Mic, Bell, User, Home, Compass, PlaySquare, Clock, ThumbsUp, ArrowLeft, Settings, MoreVertical, Share, MessageSquare } from 'lucide-react';
+import { useState } from 'react';
+import { Search, Mic, Bell, User, Home, Compass, PlaySquare, Clock, ThumbsUp, ArrowLeft, MoreVertical, Share, MessageSquare } from 'lucide-react';
 
 export default function YoutubeApp() {
   const [currentPage, setCurrentPage] = useState('home');

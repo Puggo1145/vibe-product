@@ -1,4 +1,3 @@
-import React from 'react';
 import YoutubeApp from './appPrototypes/YoutubeApp';
 import ShortVideoApp from './appPrototypes/ShortVideoApp';
 import MeditationApp from './appPrototypes/MeditationApp';

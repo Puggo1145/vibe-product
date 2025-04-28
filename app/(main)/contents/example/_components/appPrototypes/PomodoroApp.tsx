@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Play, Pause, SkipForward, Settings, Clock, List, Calendar, BarChart, Bell, CheckCircle, Menu, Plus, MoreVertical, User, ChevronLeft, Edit } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Play, Pause, SkipForward, Settings, Clock, List, Calendar, BarChart, CheckCircle, Menu, Plus, MoreVertical, ChevronLeft, Edit } from 'lucide-react';
 
 export default function PomodoroApp() {
   const [currentPage, setCurrentPage] = useState('timer');

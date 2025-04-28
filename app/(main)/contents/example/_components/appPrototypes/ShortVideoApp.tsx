@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Heart, MessageCircle, Share2, Plus, Home, Search, User, Music, Bell, Compass, ArrowLeft, Send } from 'lucide-react';
+import { useState } from 'react';
+import { Heart, MessageCircle, Share2, Plus, Home, Search, User, Music, Bell, ArrowLeft, Send } from 'lucide-react';
 
 export default function ShortVideoApp() {
   const [currentPage, setCurrentPage] = useState('feed');
@@ -64,7 +64,11 @@ export default function ShortVideoApp() {
         className="absolute inset-0 bg-gradient-to-b from-gray-900/10 to-gray-900/60 z-10 cursor-pointer"
         onClick={() => {
           // 一半概率上滑，一半概率下滑
-          Math.random() > 0.5 ? handleSwipeUp() : handleSwipeDown();
+          if (Math.random() > 0.5) {
+            handleSwipeUp();
+          } else {
+            handleSwipeDown();
+          }
         }}
       />
       

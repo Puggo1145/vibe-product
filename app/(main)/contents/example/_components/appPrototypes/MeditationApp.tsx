@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Moon, Sun, Home, Calendar, Play, Pause, SkipBack, SkipForward, Menu, User, Clock, Award, Settings, ArrowLeft, Heart, Bell, Search } from 'lucide-react';
 
 export default function MeditationApp() {
@@ -11,7 +11,7 @@ export default function MeditationApp() {
   const [showMenu, setShowMenu] = useState(false);
   
   // 格式化时间为 MM:SS
-  const formatTime = (seconds) => {
+  const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
@@ -19,11 +19,11 @@ export default function MeditationApp() {
   
   // 播放/暂停时更新进度
   useEffect(() => {
-    let interval;
+    let interval: NodeJS.Timeout;
     if (isPlaying && timer > 0) {
       interval = setInterval(() => {
         setTimer(prev => prev - 1);
-        setProgress(prev => (timer / 600) * 100);
+        setProgress(() => (timer / 600) * 100);
       }, 1000);
     }
     return () => clearInterval(interval);
@@ -58,7 +58,7 @@ export default function MeditationApp() {
   };
   
   // 获取当前场景
-  const currentSceneData = scenes[currentScene];
+  const currentSceneData = scenes[currentScene as keyof typeof scenes];
   
   // 侧边菜单
   const renderMenu = () => (

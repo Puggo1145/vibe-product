@@ -32,6 +32,9 @@ export default function RootLayout({
         <div className="relative flex min-h-screen flex-col bg-background">
           <Header />
           <main className="flex-1">{children}</main>
+          <footer className="text-center text-sm text-gray-500 py-8">
+            <p>Made by Claude 3.7 Sonnet + Cursor</p>
+          </footer>
         </div>
       </body>
     </html>

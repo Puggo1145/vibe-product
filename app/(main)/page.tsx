@@ -7,13 +7,13 @@ import ExampleSection from "@/app/(main)/contents/example/example-section";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <HeroSection />
       <VibeCodingIntroduction />
       <AICodingToolsSection />
       <ModelsSection />
       <PromptDesignSection />
       <ExampleSection />
-    </main>
+    </>
   );
 }
