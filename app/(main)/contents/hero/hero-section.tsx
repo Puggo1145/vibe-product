@@ -1,10 +1,7 @@
-import React from 'react';
 import DeviceFrame from './_components/DeviceFrame';
 import AppInterface from './_components/AppInterface';
 import DesktopInterface from './_components/DesktopInterface';
 import WebInterface from './_components/WebInterface';
-
-// Note: Background placeholders are now removed as we use DeviceFrames for the main visual
 
 export default function HeroSection() {
     return (
